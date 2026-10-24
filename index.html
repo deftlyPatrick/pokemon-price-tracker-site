@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <script>
+      (function () {
+        var w = window.screen && window.screen.width || 0;
+        var h = window.screen && window.screen.height || 0;
+        var shortSide = Math.min(w, h);
+        var ua = navigator.userAgent || '';
+        var touch = navigator.maxTouchPoints > 1;
+        var phone = /Android|iPhone|iPad|iPod|Mobile/i.test(ua) || (shortSide > 0 && shortSide <= 1000) || (touch && shortSide > 0 && shortSide <= 1200);
+        if (!phone) return;
+        document.documentElement.classList.add('is-phone');
+        var meta = document.querySelector('meta[name="viewport"]');
+        if (meta) meta.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover');
+      })();
+    </script>
+    <meta name="theme-color" content="#0b1426" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="icon" type="image/png" href="/cardboard-hunters-site/assets/app-icon.d73e7099.png" />
+    <link rel="apple-touch-icon" href="/cardboard-hunters-site/assets/app-icon.d73e7099.png" />
+    <meta name="apple-mobile-web-app-title" content="Cardboard Hunters" />
+    <title>Cardboard Hunters</title>
+    <script type="module" crossorigin src="/cardboard-hunters-site/assets/index.afd7671d.js"></script>
+    <link rel="stylesheet" href="/cardboard-hunters-site/assets/index.110b11e8.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    
+  </body>
+</html>
